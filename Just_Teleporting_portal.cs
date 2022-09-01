@@ -6,11 +6,11 @@ public class Portal : MonoBehaviour
 {
     public Transform TranslatePosition;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider _col)
     {
         if(other.gameObject.tag == "Player")
         {
-            Transform ParentTransform = other.transform;
+            Transform ParentTransform = _col.transform;
             
             while (true)
             {
