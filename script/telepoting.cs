@@ -7,11 +7,11 @@ public class teleporter : MonoBehaviour
     public Transform user;
     public Transform reciever;
 
-    private bool playerisoverlapping = false;
+    private bool PlayerIsOverLapping = false;
 
     private void Update()
     {
-        if(playerisoverlapping)
+        if(PlayerIsOverLapping)
         {
             Vector3 toPlayer = user.position - transform.position;
             float dotProduct = Vector3.Dot(transform.up, toPlayer);
@@ -25,7 +25,7 @@ public class teleporter : MonoBehaviour
                 Vector3 postionOffset = Quaternion.Euler(0f, rotaionDiff, 0f) * toPlayer;
                 user.position = reciever.position + postionOffset;
 
-                playerisoverlapping = false;
+                PlayerIsOverLapping = false;
             }
 
         }
@@ -35,7 +35,7 @@ public class teleporter : MonoBehaviour
     {
          if (other.tag == "user")
         {
-            playerisoverlapping = true;
+            PlayerIsOverLapping = true;
         }
     }
 
@@ -43,7 +43,7 @@ public class teleporter : MonoBehaviour
     {
         if (other.tag == "user")
         {
-            playerisoverlapping = false;
+            PlayerIsOverLapping = false;
         }
     }
 
