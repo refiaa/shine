@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class teleporter : MonoBehaviour
+public class Teleporter : MonoBehaviour
 {
     public Transform user;
     public Transform reciever;

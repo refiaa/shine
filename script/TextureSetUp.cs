@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class textureSetup : MonoBehaviour
+public class TextureSetup : MonoBehaviour
 {
     public Camera cameraA;
     public Camera cameraB;
