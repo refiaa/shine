@@ -1,3 +1,1 @@
 # shine
-shiningのshineです
-
